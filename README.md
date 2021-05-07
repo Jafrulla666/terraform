@@ -12,3 +12,12 @@ For now, just be aware that you need to run init any time you start with new Ter
  The output of the plan command is a little like the output of the diff command: 
  resources with a plus sign (+) are going to be created, resources with a minus sign (-) are going to be deleted, 
  and resources with a tilde sign (~) are going to be modified in-place. In the output above, you can see that Terraform is planning on creating a single EC2 Instance and nothing else, which is exactly what we want
+
+# terraform apply
+ You’ll notice that the apply command shows you the same plan output and asks you to confirm if you actually want to proceed with this plan.
+ So while plan is available as a separate command, it’s mainly useful for quick sanity checks and during code reviews, 
+ and most of the time you’ll run apply directly and review the plan output it shows you.
+ 
+ # terraform destroy
+   When you’re done experimenting with Terraform, it’s a good idea to remove all the resources you created so AWS doesn’t charge you for them.
+   Since Terraform keeps track of what resources you created, cleanup is simple. All you need to do is run the destroy command:
