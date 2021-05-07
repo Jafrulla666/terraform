@@ -21,3 +21,13 @@ For now, just be aware that you need to run init any time you start with new Ter
  # terraform destroy
    When you’re done experimenting with Terraform, it’s a good idea to remove all the resources you created so AWS doesn’t charge you for them.
    Since Terraform keeps track of what resources you created, cleanup is simple. All you need to do is run the destroy command:
+
+# terraform fmt
+ We recommend using consistent formatting in all of your configuration files. The terraform fmt command automatically updates configurations in the current directory for readability and consistency.
+Format your configuration. Terraform will print out the names of the files it modified, if any. In this case, your configuration file was already formatted correctly, so Terraform won't return any file names.
+
+# terraform show
+ Inspect the current state using terraform show
+ 
+ # terraform validate      
+   Check whether the configuration is valid
